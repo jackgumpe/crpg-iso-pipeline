@@ -1,0 +1,20 @@
+{
+  "camera": "fixed isometric | orthographic projection | distant pulled-back view | game map perspective",
+  "perspective": "flat | no vanishing point | no depth scaling | equal scale for foreground and background",
+  "composition": "grid-based stone floor tiles | top-down diagonal angle | full environment visible in one frame | wide shot",
+  "style": "1990s pre-rendered isometric CRPG graphics | similar to Torment: Tides of Numenera | like Baldur's Gate and Planescape: Torment",
+  "rendering": "low-poly 3D models rendered to 2D sprites | baked lighting and shadows | orthographic isometric | sharp hard-edged geometry | subtle hand-painted texture overlays | consistent pixel density | baked ambient occlusion",
+  "materials": "stone, metal, wood with baked specular highlights",
+  "shadows": "crisp, baked into ground plane | always same direction | no dynamic lighting",
+  "lighting": "soft diffused shadows | ambient | no harsh directional source",
+  "negative": "no close-ups | no cinematic framing | no perspective lens | no first-person or over-shoulder views",
+  "tile_pixels": 128,
+  "grid_dims": [
+    24,
+    14
+  ],
+  "default_pivot": [
+    0.5,
+    0.9
+  ]
+}
