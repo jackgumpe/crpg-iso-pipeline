@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "id": "BG_blackEarthEntrance_A01",
+    "version": "1.0.0",
+    "assetType": "BG",
+    "seed": 4312,
+    "author": "jackgumpe",
+    "createdAt": "2025-09-15T12:00:00Z"
+  },
+  "style": {
+    "model": "image-model:latest",
+    "styleTokens": [
+      "CAMERA_TON_ISO",
+      "LIGHT_DUSK_AMBER",
+      "FOG_LOW"
+    ],
+    "palette": [
+      "#2e1f1a",
+      "#5f463a",
+      "#c4a07a",
+      "#3c4a52"
+    ],
+    "mood": "ancient, solemn, windblown ash"
+  },
+  "scene": {
+    "setting": "The Black Earth entrance\u2014eroded obsidian archway half-buried in ash, basalt plinths, sparse brush",
+    "focalElements": [
+      "archway",
+      "basalt steps",
+      "sigiled obelisk on left"
+    ],
+    "materials": [
+      "obsidian",
+      "basalt",
+      "wind-carved ash",
+      "tarnished bronze inlays"
+    ],
+    "terrain": "gently sloped plateau, cracked earth, drifting ash",
+    "weather": "dry air, light dust in wind",
+    "storyBeats": "threshold to the first Qliphah; the world feels heavy and ritualistic"
+  },
+  "composition": {
+    "camera": {
+      "token": "CAMERA_TON_ISO",
+      "yawDeg": 45,
+      "pitchDeg": 35,
+      "lensHint": "narrow perspective mimicking orthographic (~100mm)",
+      "orthographicLike": true
+    },
+    "framing": "archway center-left, obelisk foreground left as anchor, path leading to right third",
+    "depthNotes": "foreground rubble anchors parallax; midground steps; hazy cliffs in background",
+    "negativeSpace": "upper-right sky haze reserved for UI readability",
+    "ruleOfThirds": true
+  },
+  "tech": {
+    "resolution": "4096x3072",
+    "format": "PNG",
+    "sampler": "default",
+    "steps": 30,
+    "guidance": 7.5,
+    "tiling": false
+  },
+  "neg": {
+    "forbidden": [
+      "modern debris",
+      "cars",
+      "street signs",
+      "text/letters",
+      "human figures"
+    ],
+    "styleAvoid": [
+      "cartoonish outlines",
+      "over-saturated fantasy glow"
+    ]
+  },
+  "post": {
+    "sharpen": "subtle",
+    "denoise": "none",
+    "grading": "none (grading handled in-engine if needed)"
+  },
+  "outputs": {
+    "filename": "BG_blackEarthEntrance_A01_CAMERA_TON_ISO_LIGHT_DUSK_AMBER_v01_seed4312.png",
+    "path": "Assets/Art/Backgrounds/",
+    "lfs": true
+  }
+}

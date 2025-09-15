@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "id": "PROP_obelisk_blackEarthEntrance_L01",
+    "version": "1.0.0",
+    "assetType": "PROP",
+    "seed": 7721,
+    "author": "jackgumpe",
+    "createdAt": "2025-09-15T12:00:00Z"
+  },
+  "style": {
+    "model": "image-model:latest",
+    "styleTokens": [
+      "CAMERA_TON_ISO",
+      "LIGHT_DUSK_AMBER"
+    ],
+    "palette": [
+      "#2e1f1a",
+      "#b39b6b"
+    ],
+    "mood": "ritual artifact, austere"
+  },
+  "scene": {
+    "setting": "Freestanding basalt obelisk with tarnished bronze sigils; base partially buried in ash",
+    "focalElements": [
+      "upper sigil",
+      "weathered edges",
+      "ash accumulation"
+    ],
+    "materials": [
+      "basalt",
+      "bronze inlay"
+    ]
+  },
+  "composition": {
+    "camera": {
+      "token": "CAMERA_TON_ISO",
+      "yawDeg": 45,
+      "pitchDeg": 35,
+      "orthographicLike": true
+    },
+    "framing": "single prop, centered, ample transparent margins for placement",
+    "depthNotes": "soft contact shadow to ground plane",
+    "negativeSpace": "clear"
+  },
+  "tech": {
+    "resolution": "2048x2048",
+    "format": "PNG"
+  },
+  "neg": {
+    "forbidden": [
+      "text",
+      "modern graffiti",
+      "human figures"
+    ]
+  },
+  "post": {
+    "sharpen": "subtle",
+    "grading": "none"
+  },
+  "outputs": {
+    "filename": "PROP_obelisk_blackEarthEntrance_L01_CAMERA_TON_ISO_LIGHT_DUSK_AMBER_v01_seed7721.png",
+    "path": "Assets/Art/Props/",
+    "lfs": true
+  }
+}

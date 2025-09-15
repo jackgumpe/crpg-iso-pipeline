@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRPG Prompt Schema",
+  "type": "object",
+  "required": [
+    "meta",
+    "style",
+    "scene",
+    "composition",
+    "tech",
+    "neg",
+    "outputs"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "assetType",
+        "seed",
+        "author",
+        "createdAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for this prompt"
+        },
+        "version": {
+          "type": "string",
+          "description": "Semantic-like version e.g., 1.0.0"
+        },
+        "assetType": {
+          "type": "string",
+          "enum": [
+            "BG",
+            "PROP",
+            "CHAR",
+            "VFX"
+          ]
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "author": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO 8601 timestamp"
+        }
+      }
+    },
+    "style": {
+      "type": "object",
+      "required": [
+        "model",
+        "styleTokens"
+      ],
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "Image model or pipeline id"
+        },
+        "styleTokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Hex colors or named swatches"
+        },
+        "mood": {
+          "type": "string"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "setting",
+        "focalElements"
+      ],
+      "properties": {
+        "setting": {
+          "type": "string"
+        },
+        "focalElements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "terrain": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "storyBeats": {
+          "type": "string"
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "required": [
+        "camera",
+        "framing"
+      ],
+      "properties": {
+        "camera": {
+          "type": "object",
+          "properties": {
+            "token": {
+              "type": "string"
+            },
+            "yawDeg": {
+              "type": "number"
+            },
+            "pitchDeg": {
+              "type": "number"
+            },
+            "lensHint": {
+              "type": "string"
+            },
+            "orthographicLike": {
+              "type": "boolean"
+            }
+          }
+        },
+        "framing": {
+          "type": "string"
+        },
+        "depthNotes": {
+          "type": "string"
+        },
+        "negativeSpace": {
+          "type": "string"
+        },
+        "ruleOfThirds": {
+          "type": "boolean"
+        }
+      }
+    },
+    "tech": {
+      "type": "object",
+      "required": [
+        "resolution",
+        "format"
+      ],
+      "properties": {
+        "resolution": {
+          "type": "string",
+          "description": "e.g., 4096x3072"
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "PNG"
+          ]
+        },
+        "sampler": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "integer"
+        },
+        "guidance": {
+          "type": "number"
+        },
+        "tiling": {
+          "type": "boolean"
+        },
+        "inpaint": {
+          "type": "string"
+        },
+        "outpaint": {
+          "type": "string"
+        }
+      }
+    },
+    "neg": {
+      "type": "object",
+      "properties": {
+        "forbidden": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "styleAvoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "post": {
+      "type": "object",
+      "properties": {
+        "sharpen": {
+          "type": "string"
+        },
+        "denoise": {
+          "type": "string"
+        },
+        "grading": {
+          "type": "string"
+        }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "filename",
+        "path"
+      ],
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "lfs": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
