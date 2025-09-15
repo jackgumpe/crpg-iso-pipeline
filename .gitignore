@@ -1,0 +1,44 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+Recordings/
+.caches/
+# IDE
+.vs/
+.idea/
+*.sln
+*.csproj
+*.unityproj
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+# OS
+.DS_Store
+Thumbs.db
+# Unity Asset/Package caches
+Assets/AssetStoreTools*
+# Addressables/Streaming
+Assets/StreamingAssets/*
+!Assets/StreamingAssets/.gitkeep
+# Auto-generated
+*.unitypackage
+# Rider
+*.iml
+.gradle/
+# Logs
+*.log
+# Keep these in git (use Force Text + Visible Meta Files in Unity)
+# ProjectSettings/ and Assets/**.meta should remain
